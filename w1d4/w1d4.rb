@@ -1,3 +1,4 @@
+# Monkey patching deep_dup so we don't do it 3 times later on.
 class Array
   def deep_dup
     result = []

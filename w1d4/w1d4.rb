@@ -50,16 +50,16 @@ class Map
   end
 
   def lookup(key)
-    @map.find {|k| k == key}
+    @map.find { |arr| arr[0] == key }
   end
 
   def assign(key, value)
-    index = lookup(key)
+    index = @map.index(lookup(key))
     index ? @map[index][1] = value : @map << [key, value]
   end
 
-  def delete(key, value)
-    index = lookup(key)
+  def delete(key)
+    index = @map.index(lookup(key))
     @map.delete_at(index) if index
   end
 

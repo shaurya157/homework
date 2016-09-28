@@ -147,5 +147,3 @@ class Playwright
     plays.map {|play| Play.new(play)}
   end
 end
-
-Playwrights.all

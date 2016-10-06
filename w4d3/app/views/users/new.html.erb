@@ -1,0 +1,24 @@
+<p>
+  Welcome to the cool cats club! Please enter your details below
+</p>
+
+<form action='<%= users_url %>' method='post'>
+  <%= auth_token %>
+  <label>
+    <input type='text' name='user[user_name]' placeholder="Enter username">
+  </label>
+
+  <label>
+    <input type='password' name='user[password]' placeholder="Enter password">
+  </label>
+
+  <label>
+    <input type='text' name='user[email]' placeholder='Enter email'>
+  </label>
+  <input type='submit'>
+</form>
+
+
+<% content_for :footer do %>
+  <p>Hello from the sign up page</p>
+<% end %>
